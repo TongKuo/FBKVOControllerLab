@@ -12,7 +12,7 @@
 		835AB51A1A12651000ACA822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5191A12651000ACA822 /* main.m */; };
 		835AB51E1A12651000ACA822 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 835AB51C1A12651000ACA822 /* Credits.rtf */; };
 		835AB5211A12651000ACA822 /* FBKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5201A12651000ACA822 /* FBKAppDelegate.m */; };
-		835AB5241A12651000ACA822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5221A12651000ACA822 /* MainMenu.xib */; };
+		835AB5241A12651000ACA822 /* FBKMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5221A12651000ACA822 /* FBKMainMenu.xib */; };
 		835AB5261A12651000ACA822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5251A12651000ACA822 /* Images.xcassets */; };
 		835AB52D1A12651000ACA822 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB52C1A12651000ACA822 /* XCTest.framework */; };
 		835AB52E1A12651000ACA822 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
@@ -51,7 +51,7 @@
 		835AB51D1A12651000ACA822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		835AB51F1A12651000ACA822 /* FBKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBKAppDelegate.h; sourceTree = "<group>"; };
 		835AB5201A12651000ACA822 /* FBKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBKAppDelegate.m; sourceTree = "<group>"; };
-		835AB5231A12651000ACA822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		835AB5231A12651000ACA822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FBKMainMenu.xib; sourceTree = "<group>"; };
 		835AB5251A12651000ACA822 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		835AB52B1A12651000ACA822 /* FBKVOControllerLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBKVOControllerLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835AB52C1A12651000ACA822 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -136,7 +136,7 @@
 			children = (
 				835AB51F1A12651000ACA822 /* FBKAppDelegate.h */,
 				835AB5201A12651000ACA822 /* FBKAppDelegate.m */,
-				835AB5221A12651000ACA822 /* MainMenu.xib */,
+				835AB5221A12651000ACA822 /* FBKMainMenu.xib */,
 				835AB5251A12651000ACA822 /* Images.xcassets */,
 				835AB5141A12651000ACA822 /* Supporting Files */,
 			);
@@ -177,10 +177,10 @@
 		83A3533E1A12663C00C0912D /* KVOController */ = {
 			isa = PBXGroup;
 			children = (
+				83A353421A12663C00C0912D /* FBKVOController */,
 				83A3533F1A12663C00C0912D /* .gitignore */,
 				83A353401A12663C00C0912D /* .travis.yml */,
 				83A353411A12663C00C0912D /* CONTRIBUTING.md */,
-				83A353421A12663C00C0912D /* FBKVOController */,
 				83A353481A12663C00C0912D /* LICENSE */,
 				83A353491A12663C00C0912D /* PATENTS */,
 				83A3534A1A12663C00C0912D /* README.md */,
@@ -286,7 +286,7 @@
 				83A3534D1A12663C00C0912D /* CONTRIBUTING.md in Resources */,
 				83A353511A12663C00C0912D /* PATENTS in Resources */,
 				835AB51E1A12651000ACA822 /* Credits.rtf in Resources */,
-				835AB5241A12651000ACA822 /* MainMenu.xib in Resources */,
+				835AB5241A12651000ACA822 /* FBKMainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,12 +347,12 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		835AB5221A12651000ACA822 /* MainMenu.xib */ = {
+		835AB5221A12651000ACA822 /* FBKMainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				835AB5231A12651000ACA822 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = FBKMainMenu.xib;
 			sourceTree = "<group>";
 		};
 		835AB5341A12651000ACA822 /* InfoPlist.strings */ = {
