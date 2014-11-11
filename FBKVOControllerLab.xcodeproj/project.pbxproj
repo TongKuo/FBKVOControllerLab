@@ -26,6 +26,7 @@
 		83A353501A12663C00C0912D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83A353481A12663C00C0912D /* LICENSE */; };
 		83A353511A12663C00C0912D /* PATENTS in Resources */ = {isa = PBXBuildFile; fileRef = 83A353491A12663C00C0912D /* PATENTS */; };
 		83A353521A12663C00C0912D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A3534A1A12663C00C0912D /* README.md */; };
+		83A353541A12683400C0912D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A353531A12683400C0912D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		83A353481A12663C00C0912D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83A353491A12663C00C0912D /* PATENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
 		83A3534A1A12663C00C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		83A353531A12683400C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				835AB5311A12651000ACA822 /* FBKVOControllerLabTests */,
 				835AB50C1A12651000ACA822 /* Frameworks */,
 				835AB50B1A12651000ACA822 /* Products */,
+				83A353531A12683400C0912D /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +289,7 @@
 				83A3534D1A12663C00C0912D /* CONTRIBUTING.md in Resources */,
 				83A353511A12663C00C0912D /* PATENTS in Resources */,
 				835AB51E1A12651000ACA822 /* Credits.rtf in Resources */,
+				83A353541A12683400C0912D /* README.md in Resources */,
 				835AB5241A12651000ACA822 /* FBKMainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
