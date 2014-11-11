@@ -137,9 +137,9 @@
 		835AB5131A12651000ACA822 /* FBKVOControllerLab */ = {
 			isa = PBXGroup;
 			children = (
+				83A353551A12695600C0912D /* Resources */,
 				835AB51F1A12651000ACA822 /* FBKAppDelegate.h */,
 				835AB5201A12651000ACA822 /* FBKAppDelegate.m */,
-				835AB5221A12651000ACA822 /* FBKMainMenu.xib */,
 				835AB5251A12651000ACA822 /* Images.xcassets */,
 				835AB5141A12651000ACA822 /* Supporting Files */,
 			);
@@ -201,6 +201,14 @@
 				83A353471A12663C00C0912D /* NSObject+FBKVOController.m */,
 			);
 			path = FBKVOController;
+			sourceTree = "<group>";
+		};
+		83A353551A12695600C0912D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				835AB5221A12651000ACA822 /* FBKMainMenu.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

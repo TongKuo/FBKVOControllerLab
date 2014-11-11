@@ -35,7 +35,7 @@
 
 @interface FBKAppDelegate : NSObject <NSApplicationDelegate>
 
-@property ( assign ) IBOutlet NSWindow* window;
+@property ( weak ) IBOutlet NSWindow* window;
 
 @end
 
