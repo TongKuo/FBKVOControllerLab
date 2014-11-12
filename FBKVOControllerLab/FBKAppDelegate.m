@@ -33,11 +33,14 @@
 
 #import "FBKAppDelegate.h"
 
+#import "NSObject+FBKVOController.h"
+
 @implementation FBKAppDelegate
 
 - ( void ) applicationDidFinishLaunching: ( NSNotification* )_Notif
     {
-    // Insert code here to initialize your application
+    FBKVOController* KVOController = [ FBKVOController controllerWithObserver: self ];
+    NSLog( @"%@", self.KVOController );
     }
 
 @end
