@@ -37,6 +37,13 @@
 			remoteGlobalIDString = 835AB5091A12651000ACA822;
 			remoteInfo = FBKVOControllerLab;
 		};
+		83BED2D21A14E36900929EEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83BED2BD1A14E36800929EEC;
+			remoteInfo = NSMapTableLab;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +78,7 @@
 		83A353491A12663C00C0912D /* PATENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
 		83A3534A1A12663C00C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		83A353531A12683400C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NSMapTableLab.xcodeproj; path = NSMapTableLab/NSMapTableLab.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				835AB50C1A12651000ACA822 /* Frameworks */,
 				835AB50B1A12651000ACA822 /* Products */,
 				83A353531A12683400C0912D /* README.md */,
+				83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +220,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		83BED2CF1A14E36900929EEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83BED2D31A14E36900929EEC /* NSMapTableLab */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,6 +292,12 @@
 			mainGroup = 835AB5011A12651000ACA822;
 			productRefGroup = 835AB50B1A12651000ACA822 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 83BED2CF1A14E36900929EEC /* Products */;
+					ProjectRef = 83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				835AB5091A12651000ACA822 /* FBKVOControllerLab */,
@@ -282,6 +305,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		83BED2D31A14E36900929EEC /* NSMapTableLab */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = NSMapTableLab;
+			remoteRef = 83BED2D21A14E36900929EEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		835AB5081A12651000ACA822 /* Resources */ = {
