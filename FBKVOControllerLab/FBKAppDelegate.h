@@ -33,6 +33,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class FBKVOController;
+
 @interface FBKAppDelegate : NSObject <NSApplicationDelegate>
     {
 @private
@@ -43,11 +45,13 @@
     __weak NSTextField*     _anotherLabel;
     }
 
-@property ( nonatomic, weak ) IBOutlet NSWindow* window;
+@property ( atomic, weak ) IBOutlet NSWindow* window;
 
-@property ( nonatomic, weak ) IBOutlet NSSlider* slider;
-@property ( nonatomic, weak ) IBOutlet NSTextField* sliderLabel;
-@property ( nonatomic, weak ) IBOutlet NSTextField* anotherLabel;
+@property ( atomic, weak ) IBOutlet NSSlider* slider;
+@property ( atomic, weak ) IBOutlet NSTextField* sliderLabel;
+@property ( atomic, weak ) IBOutlet NSTextField* anotherLabel;
+
+@property ( atomic, strong ) IBOutlet FBKVOController* KVOController;
 
 @end
 

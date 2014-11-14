@@ -43,6 +43,8 @@
 @synthesize sliderLabel = _sliderLabel;
 @synthesize anotherLabel = _anotherLabel;
 
+@synthesize KVOController = _KVOController;
+
 - ( void ) awakeFromNib
     {
 #if 0
@@ -51,11 +53,11 @@
                            options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                            context: NULL ];
 #endif
-    FBKVOController* KVOController = [ FBKVOController controllerWithObserver: self ];
-    [ KVOController observe: self.sliderLabel
-                    keyPath: @"doubleValue"
-                    options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                      block:
+    self.KVOController = [ FBKVOController controllerWithObserver: self ];
+    [ self.KVOController observe: self.sliderLabel
+                         keyPath: @"doubleValue"
+                         options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                           block:
         ^( FBKAppDelegate* _Observer, NSTextField* _Object, NSDictionary* _Change )
             {
             [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ _Change[ @"new" ] doubleValue ] ] ];
