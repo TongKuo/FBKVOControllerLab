@@ -34,8 +34,18 @@
 #import <Cocoa/Cocoa.h>
 
 @interface FBKAppDelegate : NSObject <NSApplicationDelegate>
+    {
+@private
+    __weak NSWindow* _window;
 
-@property ( weak ) IBOutlet NSWindow* window;
+    __weak NSDatePicker*    _datePicker;
+    __weak NSTextField*     _dateLabel;
+    }
+
+@property ( nonatomic, weak ) IBOutlet NSWindow* window;
+
+@property ( nonatomic, weak ) IBOutlet NSDatePicker* datePicker;
+@property ( nonatomic, weak ) IBOutlet NSTextField* dateLabel;
 
 @end
 

@@ -37,10 +37,28 @@
 
 @implementation FBKAppDelegate
 
-- ( void ) applicationDidFinishLaunching: ( NSNotification* )_Notif
+@synthesize window = _window;
+
+@synthesize datePicker = _datePicker;
+@synthesize dateLabel = _dateLabel;
+
+- ( void ) awakeFromNib
     {
-    FBKVOController* KVOController = [ FBKVOController controllerWithObserver: self ];
-    NSLog( @"%@", self.KVOController );
+    [ self.datePicker addObserver: self
+                       forKeyPath: @"dateValue"
+                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                          context: NULL ];
+
+    [ self.datePicker setDateValue: [ NSDate date ] ];
+    }
+
+- ( void ) observeValueForKeyPath: ( NSString* )_KeyPath
+                         ofObject: ( id )_Object
+                           change: ( NSDictionary* )_Change
+                          context: ( void* )_Context
+    {
+    if ( [ _KeyPath isEqualTo: @"dateValue" ] )
+        [ self.dateLabel setStringValue: [ ( NSDate* )_Change[ @"new" ] description ] ];
     }
 
 @end
