@@ -39,28 +39,45 @@
 
 @synthesize window = _window;
 
-@synthesize datePicker = _datePicker;
-@synthesize dateLabel = _dateLabel;
+@synthesize slider = _slider;
+@synthesize sliderLabel = _sliderLabel;
+@synthesize anotherLabel = _anotherLabel;
 
 - ( void ) awakeFromNib
     {
-    [ self.datePicker addObserver: self
-                       forKeyPath: @"dateValue"
-                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                          context: NULL ];
+#if 0
+    [ self.sliderLabel addObserver: self
+                        forKeyPath: @"doubleValue"
+                           options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                           context: NULL ];
+#endif
+    FBKVOController* KVOController = [ FBKVOController controllerWithObserver: self ];
+    [ KVOController observe: self.sliderLabel
+                    keyPath: @"doubleValue"
+                    options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      block:
+        ^( FBKAppDelegate* _Observer, NSTextField* _Object, NSDictionary* _Change )
+            {
+            [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ _Change[ @"new" ] doubleValue ] ] ];
+            } ];
 
-    [ self.datePicker setDateValue: [ NSDate date ] ];
+    [ self.sliderLabel setDoubleValue: 20.2131f ];
     }
 
+- ( IBAction ) sliderValueChanged: ( id )_Sender
+    {
+    [ self.sliderLabel setDoubleValue: self.slider.doubleValue ];
+    }
+#if 0
 - ( void ) observeValueForKeyPath: ( NSString* )_KeyPath
                          ofObject: ( id )_Object
                            change: ( NSDictionary* )_Change
                           context: ( void* )_Context
     {
-    if ( [ _KeyPath isEqualTo: @"dateValue" ] )
-        [ self.dateLabel setStringValue: [ ( NSDate* )_Change[ @"new" ] description ] ];
+    if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
+        [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ _Change[ @"new" ] doubleValue ] ] ];
     }
-
+#endif
 @end
 
 //////////////////////////////////////////////////////////////////////////////

@@ -38,14 +38,16 @@
 @private
     __weak NSWindow* _window;
 
-    __weak NSDatePicker*    _datePicker;
-    __weak NSTextField*     _dateLabel;
+    __weak NSSlider*        _slider;
+    __weak NSTextField*     _sliderLabel;
+    __weak NSTextField*     _anotherLabel;
     }
 
 @property ( nonatomic, weak ) IBOutlet NSWindow* window;
 
-@property ( nonatomic, weak ) IBOutlet NSDatePicker* datePicker;
-@property ( nonatomic, weak ) IBOutlet NSTextField* dateLabel;
+@property ( nonatomic, weak ) IBOutlet NSSlider* slider;
+@property ( nonatomic, weak ) IBOutlet NSTextField* sliderLabel;
+@property ( nonatomic, weak ) IBOutlet NSTextField* anotherLabel;
 
 @end
 
