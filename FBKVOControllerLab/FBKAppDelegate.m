@@ -61,14 +61,16 @@
                         keyPaths: @[ @"doubleValue", @"backgroundColor" ]
                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                            block:
-        ^( FBKAppDelegate* _Observer, NSTextField* _Object, NSDictionary* _Change )
+        ^( NSString* _KeyPath, FBKAppDelegate* _Observer, NSTextField* _Object, NSDictionary* _Change )
             {
             id newChangeItem = _Change[ @"new" ];
 
-            if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
+//            if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
+            if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
                 [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
 
-            else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
+//            else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
+            else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
                 {
                 [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
                 [ self.colorWell setColor: ( NSColor* )newChangeItem ];
