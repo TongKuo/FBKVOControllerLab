@@ -48,6 +48,23 @@
 
 @synthesize KVOController = _KVOController;
 
+- ( void ) observedPropertiesChange: ( NSDictionary* )_Change
+                             object: ( id )_Object
+    {
+    id newChangeItem = _Change[ @"new" ];
+
+  if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
+//    if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
+        [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
+
+  else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
+//    else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
+        {
+        [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
+        [ self.colorWell setColor: ( NSColor* )newChangeItem ];
+        }
+    }
+
 - ( void ) awakeFromNib
     {
 #if 0
@@ -56,7 +73,14 @@
                            options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                            context: NULL ];
 #endif
+
     self.KVOController = [ FBKVOController controllerWithObserver: self ];
+    [ self.KVOController observe: self.sliderLabel
+                        keyPaths: @[ @"doubleValue", @"backgroundColor" ]
+                         options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                          action: @selector( observedPropertiesChange:object: ) ];
+
+#if 0
     [ self.KVOController observe: self.sliderLabel
                         keyPaths: @[ @"doubleValue", @"backgroundColor" ]
                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
@@ -76,6 +100,7 @@
                 [ self.colorWell setColor: ( NSColor* )newChangeItem ];
                 }
             } ];
+#endif
 
     [ self.sliderLabel setDoubleValue: 20.2131f ];
     [ NSApp sendAction: @selector( generateRandomColor: )
