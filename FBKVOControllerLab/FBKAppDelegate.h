@@ -43,6 +43,9 @@
     __weak NSSlider*        _slider;
     __weak NSTextField*     _sliderLabel;
     __weak NSTextField*     _anotherLabel;
+
+    __weak NSButton*        _generateRandomColor;
+    __weak NSColorWell*     _colorWell;
     }
 
 @property ( atomic, weak ) IBOutlet NSWindow* window;
@@ -51,7 +54,10 @@
 @property ( atomic, weak ) IBOutlet NSTextField* sliderLabel;
 @property ( atomic, weak ) IBOutlet NSTextField* anotherLabel;
 
-@property ( atomic, strong ) IBOutlet FBKVOController* KVOController;
+@property ( atomic, weak ) IBOutlet NSButton* generateRandomColor;
+@property ( atomic, weak ) IBOutlet NSColorWell* colorWell;
+
+@property ( atomic, strong ) FBKVOController* KVOController;
 
 @end
 

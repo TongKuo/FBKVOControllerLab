@@ -43,6 +43,9 @@
 @synthesize sliderLabel = _sliderLabel;
 @synthesize anotherLabel = _anotherLabel;
 
+@synthesize generateRandomColor = _generateRandomColor;
+@synthesize colorWell = _colorWell;
+
 @synthesize KVOController = _KVOController;
 
 - ( void ) awakeFromNib
@@ -55,21 +58,57 @@
 #endif
     self.KVOController = [ FBKVOController controllerWithObserver: self ];
     [ self.KVOController observe: self.sliderLabel
-                         keyPath: @"doubleValue"
+                        keyPaths: @[ @"doubleValue", @"backgroundColor" ]
                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                            block:
         ^( FBKAppDelegate* _Observer, NSTextField* _Object, NSDictionary* _Change )
             {
-            [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ _Change[ @"new" ] doubleValue ] ] ];
+            id newChangeItem = _Change[ @"new" ];
+
+            if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
+                [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
+
+            else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
+                {
+                [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
+                [ self.colorWell setColor: ( NSColor* )newChangeItem ];
+                }
             } ];
 
     [ self.sliderLabel setDoubleValue: 20.2131f ];
+    [ NSApp sendAction: @selector( generateRandomColor: )
+                    to: self
+                  from: self.generateRandomColor ];
     }
 
+#pragma mark IBActions
 - ( IBAction ) sliderValueChanged: ( id )_Sender
     {
     [ self.sliderLabel setDoubleValue: self.slider.doubleValue ];
     }
+
+- ( IBAction ) generateRandomColor: ( id )_Sender
+    {
+    dispatch_once_t static onceToken;
+
+    dispatch_once( &onceToken
+        , ^( void )
+            {
+            srand( ( unsigned int )time( NULL ) );
+            } );
+
+    CGFloat redComponent = ( rand() % 255 ) / 255.f;
+    CGFloat greenComponent = ( rand() % 255 ) / 255.f;
+    CGFloat blueComponent = ( rand() % 255 ) / 255.f;
+
+    NSColor* newColor = [ NSColor colorWithCalibratedRed: redComponent
+                                                   green: greenComponent
+                                                    blue: blueComponent
+                                                   alpha: 1 ];
+
+    [ self.sliderLabel setBackgroundColor: newColor ];
+    }
+
 #if 0
 - ( void ) observeValueForKeyPath: ( NSString* )_KeyPath
                          ofObject: ( id )_Object
