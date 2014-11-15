@@ -54,11 +54,9 @@
     {
     id newChangeItem = _Change[ @"new" ];
 
-//  if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
     if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
         [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
 
-//  else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
     else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
         {
         [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
@@ -68,20 +66,13 @@
 
 - ( void ) awakeFromNib
     {
-#if 0
-    [ self.sliderLabel addObserver: self
-                        forKeyPath: @"doubleValue"
-                           options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                           context: NULL ];
-#endif
-
     self.KVOController = [ FBKVOController controllerWithObserver: self ];
-    [ self.KVOController observe: self.sliderLabel
-                        keyPaths: @[ @"doubleValue", @"backgroundColor" ]
-                         options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                          action: @selector( observedPropertiesChange:keyPath:object: ) ];
+//    [ self.KVOController observe: self.sliderLabel
+//                        keyPaths: @[ @"doubleValue", @"backgroundColor" ]
+//                         options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+//                          action: @selector( observedPropertiesChange:keyPath:object: ) ];
 
-#if 0
+#if 1
     [ self.KVOController observe: self.sliderLabel
                         keyPaths: @[ @"doubleValue", @"backgroundColor" ]
                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
@@ -90,11 +81,9 @@
             {
             id newChangeItem = _Change[ @"new" ];
 
-//            if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
             if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
                 [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
 
-//            else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
             else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
                 {
                 [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
