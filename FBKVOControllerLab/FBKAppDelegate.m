@@ -49,16 +49,17 @@
 @synthesize KVOController = _KVOController;
 
 - ( void ) observedPropertiesChange: ( NSDictionary* )_Change
+                            keyPath: ( NSString* )_KeyPath
                              object: ( id )_Object
     {
     id newChangeItem = _Change[ @"new" ];
 
-  if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
-//    if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
+//  if ( [ newChangeItem isKindOfClass: [ NSNumber class ] ] )
+    if ( [ _KeyPath isEqualToString: @"doubleValue" ] )
         [ self.anotherLabel setStringValue: [ NSString stringWithFormat: @"%g", [ ( NSNumber* )newChangeItem doubleValue ] ] ];
 
-  else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
-//    else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
+//  else if ( [ newChangeItem isKindOfClass: [ NSColor class ] ] )
+    else if ( [ _KeyPath isEqualToString: @"backgroundColor" ] )
         {
         [ self.anotherLabel setBackgroundColor: ( NSColor* )newChangeItem ];
         [ self.colorWell setColor: ( NSColor* )newChangeItem ];
@@ -78,7 +79,7 @@
     [ self.KVOController observe: self.sliderLabel
                         keyPaths: @[ @"doubleValue", @"backgroundColor" ]
                          options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                          action: @selector( observedPropertiesChange:object: ) ];
+                          action: @selector( observedPropertiesChange:keyPath:object: ) ];
 
 #if 0
     [ self.KVOController observe: self.sliderLabel
