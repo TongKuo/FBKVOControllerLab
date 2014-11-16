@@ -18,14 +18,8 @@
 		835AB52E1A12651000ACA822 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
 		835AB5361A12651000ACA822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5341A12651000ACA822 /* InfoPlist.strings */; };
 		835AB5381A12651000ACA822 /* FBKVOControllerLabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5371A12651000ACA822 /* FBKVOControllerLabTests.m */; };
-		83A3534B1A12663C00C0912D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 83A3533F1A12663C00C0912D /* .gitignore */; };
-		83A3534C1A12663C00C0912D /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 83A353401A12663C00C0912D /* .travis.yml */; };
-		83A3534D1A12663C00C0912D /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A353411A12663C00C0912D /* CONTRIBUTING.md */; };
-		83A3534E1A12663C00C0912D /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A353451A12663C00C0912D /* FBKVOController.m */; };
-		83A3534F1A12663C00C0912D /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A353471A12663C00C0912D /* NSObject+FBKVOController.m */; };
-		83A353501A12663C00C0912D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83A353481A12663C00C0912D /* LICENSE */; };
-		83A353511A12663C00C0912D /* PATENTS in Resources */ = {isa = PBXBuildFile; fileRef = 83A353491A12663C00C0912D /* PATENTS */; };
-		83A353521A12663C00C0912D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A3534A1A12663C00C0912D /* README.md */; };
+		837FEE651A18964E0083B895 /* FBKVOController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837FEE641A18964E0083B895 /* FBKVOController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		837FEE661A1896580083B895 /* FBKVOController.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 837FEE641A18964E0083B895 /* FBKVOController.framework */; };
 		83A353541A12683400C0912D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A353531A12683400C0912D /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +39,19 @@
 			remoteInfo = NSMapTableLab;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		837FEE621A1895680083B895 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Frameworks;
+			dstSubfolderSpec = 10;
+			files = (
+				837FEE661A1896580083B895 /* FBKVOController.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		835AB50A1A12651000ACA822 /* FBKVOControllerLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBKVOControllerLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,17 +73,8 @@
 		835AB5331A12651000ACA822 /* FBKVOControllerLabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBKVOControllerLabTests-Info.plist"; sourceTree = "<group>"; };
 		835AB5351A12651000ACA822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		835AB5371A12651000ACA822 /* FBKVOControllerLabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBKVOControllerLabTests.m; sourceTree = "<group>"; };
-		83A3533F1A12663C00C0912D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		83A353401A12663C00C0912D /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		83A353411A12663C00C0912D /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		83A353431A12663C00C0912D /* FBKVOController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBKVOController-Prefix.pch"; sourceTree = "<group>"; };
-		83A353441A12663C00C0912D /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
-		83A353451A12663C00C0912D /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
-		83A353461A12663C00C0912D /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
-		83A353471A12663C00C0912D /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
-		83A353481A12663C00C0912D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		83A353491A12663C00C0912D /* PATENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PATENTS; sourceTree = "<group>"; };
-		83A3534A1A12663C00C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		837FEE601A1895610083B895 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = ../../FBKVOController.framework; sourceTree = "<group>"; };
+		837FEE641A18964E0083B895 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = FBKVOControllerLab/Frameworks/FBKVOController.framework; sourceTree = "<group>"; };
 		83A353531A12683400C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NSMapTableLab.xcodeproj; path = NSMapTableLab/NSMapTableLab.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837FEE651A18964E0083B895 /* FBKVOController.framework in Frameworks */,
 				835AB50E1A12651000ACA822 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +125,8 @@
 		835AB50C1A12651000ACA822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				837FEE641A18964E0083B895 /* FBKVOController.framework */,
+				837FEE601A1895610083B895 /* FBKVOController.framework */,
 				835AB50D1A12651000ACA822 /* Cocoa.framework */,
 				835AB52C1A12651000ACA822 /* XCTest.framework */,
 				835AB50F1A12651000ACA822 /* Other Frameworks */,
@@ -158,7 +159,6 @@
 		835AB5141A12651000ACA822 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83A3533E1A12663C00C0912D /* KVOController */,
 				835AB5151A12651000ACA822 /* FBKVOControllerLab-Info.plist */,
 				835AB5161A12651000ACA822 /* InfoPlist.strings */,
 				835AB5191A12651000ACA822 /* main.m */,
@@ -184,32 +184,6 @@
 				835AB5341A12651000ACA822 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		83A3533E1A12663C00C0912D /* KVOController */ = {
-			isa = PBXGroup;
-			children = (
-				83A353421A12663C00C0912D /* FBKVOController */,
-				83A3533F1A12663C00C0912D /* .gitignore */,
-				83A353401A12663C00C0912D /* .travis.yml */,
-				83A353411A12663C00C0912D /* CONTRIBUTING.md */,
-				83A353481A12663C00C0912D /* LICENSE */,
-				83A353491A12663C00C0912D /* PATENTS */,
-				83A3534A1A12663C00C0912D /* README.md */,
-			);
-			path = KVOController;
-			sourceTree = "<group>";
-		};
-		83A353421A12663C00C0912D /* FBKVOController */ = {
-			isa = PBXGroup;
-			children = (
-				83A353431A12663C00C0912D /* FBKVOController-Prefix.pch */,
-				83A353441A12663C00C0912D /* FBKVOController.h */,
-				83A353451A12663C00C0912D /* FBKVOController.m */,
-				83A353461A12663C00C0912D /* NSObject+FBKVOController.h */,
-				83A353471A12663C00C0912D /* NSObject+FBKVOController.m */,
-			);
-			path = FBKVOController;
 			sourceTree = "<group>";
 		};
 		83A353551A12695600C0912D /* Resources */ = {
@@ -238,6 +212,7 @@
 				835AB5061A12651000ACA822 /* Sources */,
 				835AB5071A12651000ACA822 /* Frameworks */,
 				835AB5081A12651000ACA822 /* Resources */,
+				837FEE621A1895680083B895 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -321,14 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A3534C1A12663C00C0912D /* .travis.yml in Resources */,
-				83A3534B1A12663C00C0912D /* .gitignore in Resources */,
-				83A353521A12663C00C0912D /* README.md in Resources */,
-				83A353501A12663C00C0912D /* LICENSE in Resources */,
 				835AB5181A12651000ACA822 /* InfoPlist.strings in Resources */,
 				835AB5261A12651000ACA822 /* Images.xcassets in Resources */,
-				83A3534D1A12663C00C0912D /* CONTRIBUTING.md in Resources */,
-				83A353511A12663C00C0912D /* PATENTS in Resources */,
 				835AB51E1A12651000ACA822 /* Credits.rtf in Resources */,
 				83A353541A12683400C0912D /* README.md in Resources */,
 				835AB5241A12651000ACA822 /* FBKMainMenu.xib in Resources */,
@@ -350,9 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A3534F1A12663C00C0912D /* NSObject+FBKVOController.m in Sources */,
 				835AB5211A12651000ACA822 /* FBKAppDelegate.m in Sources */,
-				83A3534E1A12663C00C0912D /* FBKVOController.m in Sources */,
 				835AB51A1A12651000ACA822 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +454,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/EsquireTongG,
+					"$(PROJECT_DIR)/FBKVOControllerLab/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
 				INFOPLIST_FILE = "FBKVOControllerLab/FBKVOControllerLab-Info.plist";
@@ -501,6 +473,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/EsquireTongG,
+					"$(PROJECT_DIR)/FBKVOControllerLab/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
 				INFOPLIST_FILE = "FBKVOControllerLab/FBKVOControllerLab-Info.plist";

@@ -33,7 +33,7 @@
 
 #import "FBKAppDelegate.h"
 
-#import "NSObject+FBKVOController.h"
+#import <FBKVOController/NSObject+FBKVOController.h>
 
 @implementation FBKAppDelegate
 
