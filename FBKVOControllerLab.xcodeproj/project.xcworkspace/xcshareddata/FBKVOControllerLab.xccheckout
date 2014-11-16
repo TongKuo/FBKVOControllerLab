@@ -5,15 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D9EE5F52-7243-4918-8FAE-1D42DE61CAA6</string>
+	<string>F7814A3B-DED3-493E-AE4D-480C87E27BF6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FBKVOControllerLab</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D6586C6-A8D6-4AC4-93A3-CDA7C18C4E31</key>
 		<string>https://github.com/TongG/FBKVOControllerLab.git</string>
-		<key>5D97FE79-6014-4457-8CF3-BF0A6D061E2B</key>
-		<string>https://github.com/TongG/KVOController.git</string>
+		<key>D092DE51-1F1A-42A0-A4A6-765972E4AB58</key>
+		<string>https://github.com/TongG/Oh-My-Cal.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FBKVOControllerLab.xcodeproj/project.xcworkspace</string>
@@ -21,8 +21,8 @@
 	<dict>
 		<key>0D6586C6-A8D6-4AC4-93A3-CDA7C18C4E31</key>
 		<string>../..</string>
-		<key>5D97FE79-6014-4457-8CF3-BF0A6D061E2B</key>
-		<string>../../FBKVOControllerLab/KVOController</string>
+		<key>D092DE51-1F1A-42A0-A4A6-765972E4AB58</key>
+		<string>../../../Oh My Cal!</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/TongG/FBKVOControllerLab.git</string>
@@ -44,9 +44,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5D97FE79-6014-4457-8CF3-BF0A6D061E2B</string>
+			<string>D092DE51-1F1A-42A0-A4A6-765972E4AB58</string>
 			<key>IDESourceControlWCCName</key>
-			<string>KVOController</string>
+			<string>Oh My Cal!</string>
 		</dict>
 	</array>
 </dict>
