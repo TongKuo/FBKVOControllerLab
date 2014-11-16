@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		835AB50E1A12651000ACA822 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
+		8309417B1A18F35300ABCD65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
+		830941801A18F3B600ABCD65 /* FBKVOController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8309417F1A18F3B600ABCD65 /* FBKVOController.framework */; };
+		830941811A18F3BB00ABCD65 /* FBKVOController.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 8309417F1A18F3B600ABCD65 /* FBKVOController.framework */; };
 		835AB5181A12651000ACA822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5161A12651000ACA822 /* InfoPlist.strings */; };
 		835AB51A1A12651000ACA822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5191A12651000ACA822 /* main.m */; };
 		835AB51E1A12651000ACA822 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 835AB51C1A12651000ACA822 /* Credits.rtf */; };
@@ -18,8 +20,6 @@
 		835AB52E1A12651000ACA822 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
 		835AB5361A12651000ACA822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5341A12651000ACA822 /* InfoPlist.strings */; };
 		835AB5381A12651000ACA822 /* FBKVOControllerLabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5371A12651000ACA822 /* FBKVOControllerLabTests.m */; };
-		837FEE651A18964E0083B895 /* FBKVOController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837FEE641A18964E0083B895 /* FBKVOController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		837FEE661A1896580083B895 /* FBKVOController.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 837FEE641A18964E0083B895 /* FBKVOController.framework */; };
 		83A353541A12683400C0912D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A353531A12683400C0912D /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -41,19 +41,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		837FEE621A1895680083B895 /* CopyFiles */ = {
+		837FEE621A1895680083B895 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				837FEE661A1896580083B895 /* FBKVOController.framework in CopyFiles */,
+				830941811A18F3BB00ABCD65 /* FBKVOController.framework in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8309417F1A18F3B600ABCD65 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = FBKVOControllerLab/Frameworks/FBKVOController.framework; sourceTree = "<group>"; };
 		835AB50A1A12651000ACA822 /* FBKVOControllerLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBKVOControllerLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835AB50D1A12651000ACA822 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		835AB5101A12651000ACA822 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -73,8 +75,6 @@
 		835AB5331A12651000ACA822 /* FBKVOControllerLabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBKVOControllerLabTests-Info.plist"; sourceTree = "<group>"; };
 		835AB5351A12651000ACA822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		835AB5371A12651000ACA822 /* FBKVOControllerLabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBKVOControllerLabTests.m; sourceTree = "<group>"; };
-		837FEE601A1895610083B895 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = ../../FBKVOController.framework; sourceTree = "<group>"; };
-		837FEE641A18964E0083B895 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = FBKVOControllerLab/Frameworks/FBKVOController.framework; sourceTree = "<group>"; };
 		83A353531A12683400C0912D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		83BED2CE1A14E36900929EEC /* NSMapTableLab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NSMapTableLab.xcodeproj; path = NSMapTableLab/NSMapTableLab.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837FEE651A18964E0083B895 /* FBKVOController.framework in Frameworks */,
-				835AB50E1A12651000ACA822 /* Cocoa.framework in Frameworks */,
+				830941801A18F3B600ABCD65 /* FBKVOController.framework in Frameworks */,
+				8309417B1A18F35300ABCD65 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +125,7 @@
 		835AB50C1A12651000ACA822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				837FEE641A18964E0083B895 /* FBKVOController.framework */,
-				837FEE601A1895610083B895 /* FBKVOController.framework */,
+				8309417F1A18F3B600ABCD65 /* FBKVOController.framework */,
 				835AB50D1A12651000ACA822 /* Cocoa.framework */,
 				835AB52C1A12651000ACA822 /* XCTest.framework */,
 				835AB50F1A12651000ACA822 /* Other Frameworks */,
@@ -212,7 +211,7 @@
 				835AB5061A12651000ACA822 /* Sources */,
 				835AB5071A12651000ACA822 /* Frameworks */,
 				835AB5081A12651000ACA822 /* Resources */,
-				837FEE621A1895680083B895 /* CopyFiles */,
+				837FEE621A1895680083B895 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -251,6 +250,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					835AB5091A12651000ACA822 = {
+						DevelopmentTeam = 89BSC2UYH8;
+					};
 					835AB52A1A12651000ACA822 = {
 						TestTargetID = 835AB5091A12651000ACA822;
 					};
@@ -458,6 +460,11 @@
 					"$(inherited)",
 					/Users/EsquireTongG,
 					"$(PROJECT_DIR)/FBKVOControllerLab/Frameworks",
+					/Users/EsquireTongG/git/Oh,
+					My,
+					"Cal!/Oh",
+					My,
+					"Cal!/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
@@ -477,6 +484,11 @@
 					"$(inherited)",
 					/Users/EsquireTongG,
 					"$(PROJECT_DIR)/FBKVOControllerLab/Frameworks",
+					/Users/EsquireTongG/git/Oh,
+					My,
+					"Cal!/Oh",
+					My,
+					"Cal!/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
