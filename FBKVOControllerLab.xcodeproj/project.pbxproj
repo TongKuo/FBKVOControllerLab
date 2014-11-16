@@ -44,7 +44,7 @@
 		837FEE621A1895680083B895 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = Frameworks;
+			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				837FEE661A1896580083B895 /* FBKVOController.framework in CopyFiles */,
