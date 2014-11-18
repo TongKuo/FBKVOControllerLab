@@ -10,6 +10,7 @@
 		8309417B1A18F35300ABCD65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AB50D1A12651000ACA822 /* Cocoa.framework */; };
 		830941801A18F3B600ABCD65 /* FBKVOController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8309417F1A18F3B600ABCD65 /* FBKVOController.framework */; };
 		830941811A18F3BB00ABCD65 /* FBKVOController.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 8309417F1A18F3B600ABCD65 /* FBKVOController.framework */; };
+		830D6ECF1A1A8676001A2091 /* FBKVOController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830D6ECE1A1A8676001A2091 /* FBKVOController.plist */; };
 		835AB5181A12651000ACA822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 835AB5161A12651000ACA822 /* InfoPlist.strings */; };
 		835AB51A1A12651000ACA822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AB5191A12651000ACA822 /* main.m */; };
 		835AB51E1A12651000ACA822 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 835AB51C1A12651000ACA822 /* Credits.rtf */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		8309417F1A18F3B600ABCD65 /* FBKVOController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBKVOController.framework; path = FBKVOControllerLab/Frameworks/FBKVOController.framework; sourceTree = "<group>"; };
+		830D6ECE1A1A8676001A2091 /* FBKVOController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FBKVOController.plist; sourceTree = "<group>"; };
 		835AB50A1A12651000ACA822 /* FBKVOControllerLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBKVOControllerLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835AB50D1A12651000ACA822 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		835AB5101A12651000ACA822 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 		835AB5011A12651000ACA822 = {
 			isa = PBXGroup;
 			children = (
+				830D6ECE1A1A8676001A2091 /* FBKVOController.plist */,
 				835AB5131A12651000ACA822 /* FBKVOControllerLab */,
 				835AB5311A12651000ACA822 /* FBKVOControllerLabTests */,
 				835AB50C1A12651000ACA822 /* Frameworks */,
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				835AB5181A12651000ACA822 /* InfoPlist.strings in Resources */,
+				830D6ECF1A1A8676001A2091 /* FBKVOController.plist in Resources */,
 				835AB5261A12651000ACA822 /* Images.xcassets in Resources */,
 				835AB51E1A12651000ACA822 /* Credits.rtf in Resources */,
 				83A353541A12683400C0912D /* README.md in Resources */,
@@ -455,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +474,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
 				INFOPLIST_FILE = "FBKVOControllerLab/FBKVOControllerLab-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -479,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +500,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBKVOControllerLab/FBKVOControllerLab-Prefix.pch";
 				INFOPLIST_FILE = "FBKVOControllerLab/FBKVOControllerLab-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
